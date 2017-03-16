@@ -1014,8 +1014,7 @@ angular.module('textAngular.DOM', ['textAngular.factories'])
                             /* istanbul ignore else:  */
                             if (_nodes[i].parentNode) _nodes[i].parentNode.removeChild(_nodes[i]);
                         }
-                    } else /* istanbul ignore next: not tested since identical to blockquote */
-                    if (optionsTagName === 'pre' && taSelection.getStateShiftKey()) {
+                    } else if (optionsTagName === 'pre' && taSelection.getStateShiftKey()) {
                         //console.log('shift pre', _nodes);
                         // pre wrap other block elements
                         html = '';
